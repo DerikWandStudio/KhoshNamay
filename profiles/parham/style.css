@@ -5,7 +5,6 @@
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -16,9 +15,7 @@ html {
 body {
     background: #f7f4ee;
     color: #122334;
-
     font-family: "Vazirmatn", Tahoma, sans-serif;
-
     line-height: 1.8;
 }
 
@@ -34,7 +31,6 @@ a {
 
 .profile-page {
     width: min(1000px, 92%);
-
     margin: 50px auto;
 }
 
@@ -45,42 +41,30 @@ a {
 
 .hero {
     position: relative;
-
     padding: 65px;
-
     overflow: hidden;
-
     background: #003260;
     color: #ffffff;
-
     border-radius: 30px;
 }
 
 .hero::before {
     content: "";
-
     position: absolute;
-
     width: 300px;
     height: 300px;
-
     left: -120px;
     bottom: -150px;
-
     border-radius: 50%;
-
     background: #C9C1B0;
-
     opacity: 0.08;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-
     display: flex;
     align-items: center;
-
     gap: 35px;
 }
 
@@ -92,21 +76,16 @@ a {
 .avatar {
     width: 150px;
     height: 150px;
-
     flex-shrink: 0;
-
     overflow: hidden;
-
     border: 8px solid #ffffff18;
     border-radius: 50%;
-
     background: #C9C1B0;
 }
 
 .avatar img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
@@ -117,40 +96,41 @@ a {
 
 .badge {
     display: inline-block;
-
     padding: 4px 14px;
-
     background: #C9C1B0;
     color: #003260;
-
     border-radius: 50px;
-
     font-size: 12px;
     font-weight: 700;
 }
 
-.hero-info h1 {
+.hero-info p {
     margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+}
 
-    font-size: 52px;
-    line-height: 1.2;
+.hero-info h1 {
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.4;
 }
 
 .hero-info h2 {
-    margin-top: 5px;
-
+    margin-top: 4px;
     color: #C9C1B0;
-
-    font-size: 18px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .intro {
     max-width: 600px;
-
     margin-top: 15px;
-
     color: #ffffffbb;
-
     font-size: 15px;
 }
 
@@ -161,9 +141,7 @@ a {
 
 .social-links {
     display: flex;
-
     gap: 10px;
-
     margin-top: 20px;
 }
 
@@ -171,26 +149,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 42px;
     height: 42px;
-
     border: 1px solid #ffffff33;
     border-radius: 50%;
-
     color: #ffffff;
-
     font-size: 17px;
-
     transition: 0.2s ease;
 }
 
 .social-links a:hover {
     background: #C9C1B0;
     color: #003260;
-
     border-color: #C9C1B0;
-
     transform: translateY(-3px);
 }
 
@@ -206,34 +177,65 @@ a {
 .section-title {
     display: flex;
     align-items: center;
-
     gap: 15px;
-
     margin-bottom: 20px;
 }
 
 .section-title span {
     color: #C9C1B0;
-
     font-size: 14px;
     font-weight: 800;
 }
 
 .section-title h2 {
     color: #003260;
-
     font-size: 27px;
 }
 
+
+/* ========================================
+   About
+======================================== */
+
 .about-text {
     max-width: 750px;
-
     color: #667586;
-
     font-size: 15px;
-
-    white-space: pre-line;
 }
+
+.about-text h3 {
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: #003260;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.about-text h3:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    margin: 5px 0 18px;
+    padding-right: 22px;
+}
+
+.about-text li {
+    margin-bottom: 4px;
+    padding-right: 3px;
+}
+
+.about-text hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #e0e4e8;
+}
+
 
 /* ========================================
    Skills
@@ -241,35 +243,25 @@ a {
 
 .skills {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 15px;
 }
 
 .skill {
     padding: 18px;
-
     background: #ffffff;
-
     border: 1px solid #e0e4e8;
     border-radius: 15px;
-
     color: #003260;
-
     font-size: 14px;
     font-weight: 600;
-
     text-align: center;
-
     transition: 0.2s ease;
 }
 
 .skill:hover {
     border-color: #C9C1B0;
-
     transform: translateY(-4px);
-
     box-shadow: 0 12px 30px #00326012;
 }
 
@@ -281,33 +273,21 @@ a {
 .projects {
     display: flex;
     flex-direction: column;
-
     gap: 12px;
 }
 
 .project {
     display: grid;
-
     grid-template-columns: 55px 1fr 35px;
-
     align-items: center;
-
     gap: 20px;
-
     padding: 20px;
-
     background: #ffffff;
-
     border: 1px solid #e0e4e8;
-
     border-radius: 16px;
-
     transition: 0.2s ease;
-
     color: inherit;
-
     text-decoration: none;
-
     cursor: pointer;
 }
 
@@ -320,36 +300,28 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 45px;
     height: 45px;
-
     background: #003260;
     color: #C9C1B0;
-
     border-radius: 12px;
-
     font-size: 13px;
     font-weight: 800;
 }
 
 .project-content h3 {
     color: #003260;
-
     font-size: 18px;
 }
 
 .project-content p {
     margin-top: 3px;
-
     color: #667586;
-
     font-size: 13px;
 }
 
 .project-link {
     color: #003260;
-
     font-size: 22px;
 }
 
@@ -360,53 +332,39 @@ a {
 
 .contact {
     margin-top: 70px;
-
     padding: 55px;
-
     background: #003260;
     color: #ffffff;
-
     border-radius: 25px;
-
     text-align: center;
 }
 
 .contact-label {
     color: #C9C1B0;
-
     font-size: 13px;
     font-weight: 700;
 }
 
 .contact h2 {
     margin-top: 8px;
-
     font-size: 35px;
 }
 
 .contact p {
     margin: 5px auto 25px;
-
     color: #ffffffaa;
-
     font-size: 14px;
 }
 
 .contact-button {
     display: inline-flex;
     align-items: center;
-
     gap: 15px;
-
     padding: 11px 22px;
-
     background: #C9C1B0;
     color: #003260;
-
     border-radius: 11px;
-
     font-weight: 700;
-
     transition: 0.2s ease;
 }
 
@@ -421,11 +379,8 @@ a {
 
 footer {
     padding: 30px 0;
-
     color: #667586;
-
     font-size: 12px;
-
     text-align: center;
 }
 
@@ -438,7 +393,6 @@ footer {
 
     .profile-page {
         width: 94%;
-
         margin: 20px auto;
     }
 
@@ -448,7 +402,6 @@ footer {
 
     .hero-content {
         flex-direction: column;
-
         text-align: center;
     }
 
@@ -458,7 +411,11 @@ footer {
     }
 
     .hero-info h1 {
-        font-size: 40px;
+        font-size: 36px;
+    }
+
+    .hero-info h2 {
+        font-size: 19px;
     }
 
     .social-links {
@@ -494,14 +451,31 @@ footer {
     }
 
     .hero-info h1 {
-        font-size: 35px;
+        font-size: 31px;
+    }
+
+    .hero-info h2 {
+        font-size: 18px;
     }
 
     .avatar {
         width: 105px;
         height: 105px;
     }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .about-text h3 {
+        font-size: 17px;
+    }
 }
+
+
+/* ========================================
+   Heart Animation
+======================================== */
 
 .heart {
     display: inline-block;
@@ -532,6 +506,7 @@ footer {
     }
 }
 
+
 /* ========================================
    Back Home Button
 ======================================== */
@@ -541,24 +516,17 @@ footer {
     top: 20px;
     left: 20px;
     z-index: 1000;
-
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     padding: 10px 15px;
-
     background: #003260;
     color: #ffffff;
-
     border: 1px solid #e0e4e8;
     border-radius: 12px;
-
     font-size: 13px;
     font-weight: 700;
-
     box-shadow: 0 8px 25px #00326012;
-
     transition: 0.2s ease;
 }
 
@@ -566,26 +534,26 @@ footer {
     background: #003260;
     color: #ffffff;
     border-color: #003260;
-    transform: translateY(-2px);
-    transform: scale(1.1);
+    transform: translateY(-2px) scale(1.05);
 }
 
 .back-home i {
     font-size: 13px;
 }
 
-/* Mobile */
+
+/* ========================================
+   Back Home Button - Mobile
+======================================== */
 
 @media (max-width: 700px) {
+
     .back-home {
         top: 12px;
         left: 12px;
-
         width: 42px;
         height: 42px;
-
         padding: 0;
-
         justify-content: center;
         border-radius: 50%;
     }
