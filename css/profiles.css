@@ -13,10 +13,20 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
     background: #f7f4ee;
     color: #122334;
     font-family: "Vazirmatn", Tahoma, sans-serif;
     line-height: 1.8;
+}
+
+main {
+    flex: 1;
 }
 
 a {
