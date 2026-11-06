@@ -1,15 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="fa" dir="rtl">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>نام و نام خانوادگی | خوش نمای</title>
+    <title>{{NAME}} | {{JOB_TITLE}}</title>
+
     <link rel="icon" type="image/webp" href="../../logo.webp">
-    <meta name="description" content="صفحه معرفی شخصی نام و نام خانوادگی در خوش نمای.">
+    <link rel="stylesheet" href="../../css/profile.css">
+
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003260">
+
+    <link rel="canonical" href="{{PROFILE_URL}}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{NAME}} | {{JOB_TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:url" content="{{PROFILE_URL}}">
+    <meta property="og:image" content="{{PROFILE_IMAGE_URL}}">
+    <meta property="og:locale" content="fa_IR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{NAME}} | {{JOB_TITLE}}">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:image" content="{{PROFILE_IMAGE_URL}}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
@@ -17,35 +36,44 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Page Style -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{NAME}}",
+        "url": "{{PROFILE_URL}}",
+        "image": "{{PROFILE_IMAGE_URL}}",
+        "jobTitle": "{{JOB_TITLE}}",
+        "sameAs": [
+            "{{SOCIAL_LINK_1}}",
+            "{{SOCIAL_LINK_2}}"
+        ]
+    }
+    </script>
 
 </head>
 
-
 <body>
 
+    <!-- Back Home -->
     <a href="../../index.html" class="back-home" aria-label="بازگشت به صفحه اصلی">
+
         <i class="fa-solid fa-arrow-left"></i>
         <span>صفحه اصلی</span>
+
     </a>
 
     <main class="profile-page">
 
-        <!-- ================================
-             Hero
-        ================================= -->
-
+        <!-- Hero -->
         <section class="hero">
 
             <div class="hero-content">
 
                 <div class="avatar">
-
-                    <img src="images/profile.jpg" alt="تصویر نام و نام خانوادگی">
-
+                    <img src="images/profile.webp" alt="تصویر چهره {{NAME}}">
                 </div>
-
 
                 <div class="hero-info">
 
@@ -53,47 +81,18 @@
                         پروفایل شخصی
                     </span>
 
-                    <h1>
-                        نام و نام خانوادگی
-                    </h1>
+                    <h1>{{NAME}}</h1>
 
-                    <h2>
-                        عنوان شغلی
-                    </h2>
+                    <h2>{{JOB_TITLE}}</h2>
 
                     <p class="intro">
-                        یک معرفی کوتاه درباره شخص،
-                        فعالیت‌ها، تخصص‌ها و زمینه کاری او.
+                        {{INTRO}}
                     </p>
-
-
-                    <!-- Social Links -->
 
                     <div class="social-links">
 
-                        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-
-                            <i class="fa-brands fa-instagram"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
-
-                            <i class="fa-brands fa-telegram"></i>
-
-                        </a>
-
-                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-
-                            <i class="fa-brands fa-linkedin"></i>
-
-                        </a>
+                        <!-- Social Links -->
+                        {{SOCIAL_LINKS}}
 
                     </div>
 
@@ -103,322 +102,82 @@
 
         </section>
 
-
-        <!-- ================================
-             About
-        ================================= -->
-
+        <!-- About -->
         <section class="section">
 
             <div class="section-title">
-
                 <span>01</span>
-
-                <h2>
-                    درباره من
-                </h2>
-
+                <h2>درباره من</h2>
             </div>
 
+            <div class="about-text">
 
-            <p class="about-text">
+                <h3>{{NAME}}</h3>
 
-                این قسمت برای معرفی کامل‌تر شخص است.
-                می‌توان درباره سوابق، علایق، فعالیت‌ها،
-                تجربه کاری و مسیر حرفه‌ای فرد نوشت.
+                <p>
+                    {{ABOUT}}
+                </p>
 
-            </p>
+                <h3>مهارت‌های من</h3>
+
+                <ul>
+                    {{ABOUT_SKILLS}}
+                </ul>
+
+                <!-- Additional About Information -->
+                {{ADDITIONAL_ABOUT}}
+
+            </div>
 
         </section>
 
-
-        <!-- ================================
-             Skills
-        ================================= -->
-
+        <!-- Skills -->
         <section class="section">
 
             <div class="section-title">
-
                 <span>02</span>
-
-                <h2>
-                    مهارت‌ها
-                </h2>
-
+                <h2>مهارت‌ها</h2>
             </div>
-
 
             <div class="skills">
 
-                <span class="skill">
-                    مهارت اول
-                </span>
-
-                <span class="skill">
-                    مهارت دوم
-                </span>
-
-                <span class="skill">
-                    مهارت سوم
-                </span>
-
-                <span class="skill">
-                    مهارت چهارم
-                </span>
-
-                <span class="skill">
-                    مهارت پنجم
-                </span>
-
-                <span class="skill">
-                    مهارت ششم
-                </span>
-
-                <span class="skill">
-                    مهارت هفتم
-                </span>
-
-                <span class="skill">
-                    مهارت هشتم
-                </span>
+                {{SKILLS}}
 
             </div>
 
         </section>
 
-
-        <!-- ================================
-             Projects
-        ================================= -->
-
+        <!-- Projects -->
         <section class="section">
 
             <div class="section-title">
-
                 <span>03</span>
-
-                <h2>
-                    نمونه‌کارها
-                </h2>
-
+                <h2>نمونه‌کارها</h2>
             </div>
-
 
             <div class="projects">
 
-
-                <!-- Project 01 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه اول
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
-
-                <!-- Project 02 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه دوم
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
-
-                <!-- Project 03 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه سوم
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
-
-                <!-- Project 04 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        04
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه چهارم
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
-
-                <!-- Project 05 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        05
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه پنجم
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
-
-                <!-- Project 06 -->
-
-                <article class="project">
-
-                    <div class="project-number">
-                        06
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            نام پروژه ششم
-                        </h3>
-
-                        <p>
-                            توضیح کوتاهی درباره این پروژه
-                            و کاری که در آن انجام شده است.
-                        </p>
-
-                    </div>
-
-                    <a href="#" class="project-link" aria-label="مشاهده پروژه" target="_blank"
-                        rel="noopener noreferrer">
-
-                        ↗
-
-                    </a>
-
-                </article>
-
+                {{PROJECTS}}
 
             </div>
 
         </section>
 
-
-        <!-- ================================
-             Contact
-        ================================= -->
-
+        <!-- Contact -->
         <section class="contact">
 
             <span class="contact-label">
                 ارتباط با من
             </span>
 
-            <h2>
-                در ارتباط باشیم؟
-            </h2>
+            <h2>در ارتباط باشیم؟</h2>
 
             <p>
                 برای همکاری، پروژه یا گفتگو می‌توانید
                 از طریق ایمیل با من در ارتباط باشید.
             </p>
 
-            <a href="mailto:example@email.com" class="contact-button">
+            <a href="mailto:{{EMAIL}}" class="contact-button">
 
                 ارسال ایمیل
 
@@ -428,16 +187,12 @@
 
         </section>
 
-
-        <!-- ================================
-             Footer
-        ================================= -->
-
+        <!-- Footer -->
         <footer>
 
-            پروفایل ساخته‌شده با
+            پروفایل ساخته شده توسط خوش‌نمای با
             <span class="heart">❤️</span>
-            در خوش نمای.
+            برای شما
 
         </footer>
 
